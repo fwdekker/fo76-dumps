@@ -32,6 +32,7 @@ config = {
     "ba2extract_targets": {
         "SeventySix - Interface.ba2": {
             "interface/credits.txt": "credits.txt",
+            "interface/translate_en.txt": "translate_en.txt",
         },
         "SeventySix - Startup.ba2": {
             "misc/curvetables/json": "curvetables",
