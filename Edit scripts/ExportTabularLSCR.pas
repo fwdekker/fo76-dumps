@@ -35,10 +35,10 @@ begin
     ExportTabularLSCR_outputLines.add(
           escapeCsvString(getFileName(getFile(LSCR))) + ', '
         + escapeCsvString(stringFormID(LSCR)) + ', '
-        + escapeCsvString(evBySign(LSCR, 'EDID')) + ', '
-        + escapeCsvString(evBySign(LSCR, 'DESC')) + ', '
-        + escapeCsvString(evBySign(LSCR, 'BNAM')) + ', '
-        + escapeCsvString(evBySign(LSCR, 'NNAM'))
+        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'EDID'))) + ', '
+        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'DESC'))) + ', '
+        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'BNAM'))) + ', '
+        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'NNAM')))
     );
 end;
 
