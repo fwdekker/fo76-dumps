@@ -13,6 +13,7 @@ uses ExportTabularALCH,
      ExportTabularGLOB,
      ExportTabularGMST,
      ExportTabularIDs,
+     ExportTabularLSCR,
      ExportTabularLVLI,
      ExportTabularMISC,
      ExportTabularNPC_,
@@ -58,6 +59,7 @@ begin
         clb.items.add('FLOR.csv');
         clb.items.add('GLOB.csv');
         clb.items.add('GMST.csv');
+        clb.items.add('LSCR.csv');
         clb.items.add('LVLI.csv');
         clb.items.add('MISC.csv');
         clb.items.add('NPC_.csv');
@@ -100,6 +102,7 @@ begin
     if ExportAll_selection.readBool('', 'FLOR.csv', False) then begin ExportTabularFLOR.initialize(); end;
     if ExportAll_selection.readBool('', 'GLOB.csv', False) then begin ExportTabularGLOB.initialize(); end;
     if ExportAll_selection.readBool('', 'GMST.csv', False) then begin ExportTabularGMST.initialize(); end;
+    if ExportAll_selection.readBool('', 'LSCR.csv', False) then begin ExportTabularLSCR.initialize(); end;
     if ExportAll_selection.readBool('', 'LVLI.csv', False) then begin ExportTabularLVLI.initialize(); end;
     if ExportAll_selection.readBool('', 'MISC.csv', False) then begin ExportTabularMISC.initialize(); end;
     if ExportAll_selection.readBool('', 'NPC_.csv', False) then begin ExportTabularNPC_.initialize(); end;
@@ -142,6 +145,8 @@ begin
         ExportTabularGLOB._process(el);
     end else if ExportAll_selection.readBool('', 'GMST.csv', False) then begin if (sig = 'GMST') then begin
         ExportTabularGMST._process(el);
+    end else if ExportAll_selection.readBool('', 'LSCR.csv', False) then begin if (sig = 'LSCR') then begin
+        ExportTabularLSCR._process(el);
     end else if ExportAll_selection.readBool('', 'LVLI.csv', False) then begin if (sig = 'LVLI') then begin
         ExportTabularLVLI._process(el);
     end else if ExportAll_selection.readBool('', 'MISC.csv', False) then begin if (sig = 'MISC') then begin
@@ -164,7 +169,7 @@ begin
         ExportWikiNOTE._process(el);
     end else if ExportAll_selection.readBool('', 'TERM.wiki', False) then begin if (sig = 'TERM') then begin
         ExportWikiTERM._process(el);
-    end end end end end end end end end end end end end end end end end end end end end;
+    end end end end end end end end end end end end end end end end end end end end end end;
 end;
 
 function finalize(): Integer;
@@ -181,6 +186,7 @@ begin
     if ExportAll_selection.readBool('', 'FLOR.csv', False) then begin ExportTabularFLOR.finalize(); end;
     if ExportAll_selection.readBool('', 'GLOB.csv', False) then begin ExportTabularGLOB.finalize(); end;
     if ExportAll_selection.readBool('', 'GMST.csv', False) then begin ExportTabularGMST.finalize(); end;
+    if ExportAll_selection.readBool('', 'LSCR.csv', False) then begin ExportTabularLSCR.finalize(); end;
     if ExportAll_selection.readBool('', 'LVLI.csv', False) then begin ExportTabularLVLI.finalize(); end;
     if ExportAll_selection.readBool('', 'MISC.csv', False) then begin ExportTabularMISC.finalize(); end;
     if ExportAll_selection.readBool('', 'NPC_.csv', False) then begin ExportTabularNPC_.finalize(); end;
