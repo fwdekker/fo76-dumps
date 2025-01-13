@@ -1,6 +1,6 @@
 [project]
 name = "fo76-dumps"
-version = "4.0.1"
+version = "4.1.0"
 
 dependencies = [
     "pandas==2.2.3",

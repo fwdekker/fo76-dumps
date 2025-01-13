@@ -1,5 +1,12 @@
 # Changelog
-## [4.0.1] -- 2023-10-16
+## [4.1.0] -- 2025-01-13
+No changes have been made to the output format or contents.
+
+* Display script and game version information after running main script.
+* Add `LSCR` dumps with loading screen information. ([#109](https://github.com/FWDekker/fo76-dumps/pull/109))
+
+
+## [4.0.1] -- 2024-10-16
 No changes have been made to the output format or contents.
 
 * Automatically detect game version number from executable.
