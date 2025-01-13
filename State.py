@@ -16,7 +16,6 @@ def load_game_version(my_cfg: SimpleNamespace) -> str:
         return my_cfg.game_version
 
     try:
-        print("Loading state!")  # TODO: Remove this line!
         pe = pefile.PE(my_cfg.game_root / "Fallout76.exe", fast_load=True)
         pe.parse_data_directories(directories=[pefile.DIRECTORY_ENTRY["IMAGE_DIRECTORY_ENTRY_RESOURCE"]])
         return pe.FileInfo[0][0].StringTable[0].entries[b"ProductVersion"].decode()

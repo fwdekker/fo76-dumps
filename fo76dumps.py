@@ -134,6 +134,9 @@ def main() -> None:
             Files.delete(cfg.dump_root)
     print("")
 
+    # Output version information
+    print(f"Running dump scripts v{cfg.script_version} on Fallout 76 v{cfg.game_version}.")
+
     # Create dumps output dir
     cfg.dump_root.mkdir(exist_ok=True, parents=True)
 
