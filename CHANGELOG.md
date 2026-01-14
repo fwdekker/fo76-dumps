@@ -1,4 +1,9 @@
 # Changelog
+## [4.3.0] -- 2026-01-13
+* `CMPT` (camp title) records are no longer excluded from `IDs.csv`.
+  These records had been excluded since v4.2.0 (2025-12-20) because EcksEdit was unable to handle them.
+
+
 ## [4.2.0] -- 2025-12-20
 * `PLYT` (player title) records are no longer excluded from `IDs.csv`.
   These records had been excluded since v4.0.1 (2024-10-16) because EcksEdit was unable to handle them.

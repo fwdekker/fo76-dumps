@@ -123,7 +123,6 @@ begin
     // `and` does not short-cut, so use nested `if`s instead
 
     sig := signature(el);
-    if sig = 'CMPT' then begin exit; end;
 
     if ExportAll_selection.readBool('', 'IDs.csv', False) then begin ExportTabularIDs._process(el); end;
 
