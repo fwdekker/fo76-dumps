@@ -1,4 +1,9 @@
 # Changelog
+## [4.4.0] -- 2026-04-10
+* `TEPF` records are excluded from `IDs.csv` to prevent a crash with EcksEdit 4.1.6.17 as of PTS release 0.2.2035.0.
+  This is now the only type of record to be excluded from `IDs.csv`.
+
+
 ## [4.3.0] -- 2026-01-13
 * `CMPT` (camp title) records are no longer excluded from `IDs.csv`.
   These records had been excluded since v4.2.0 (2025-12-20) because EcksEdit was unable to handle them.
@@ -8,7 +13,7 @@
 * `PLYT` (player title) records are no longer excluded from `IDs.csv`.
   These records had been excluded since v4.0.1 (2024-10-16) because EcksEdit was unable to handle them.
 * `CMPT` records are excluded from `IDs.csv` to prevent a crash with EcksEdit 4.1.6.15.
-  This is now the only type of records to be excluded from `IDs.csv`.
+  This is now the only type of record to be excluded from `IDs.csv`.
 
 
 ## [4.1.0] -- 2025-01-13

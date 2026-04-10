@@ -41,7 +41,7 @@ var form: TForm;
 
     i: Integer;
 begin
-    result := TMemIniFile.create('test.ini');
+    result := TMemIniFile.create('fo76dump_selected_types.ini');
 
     form := frmFileSelect;
     try
@@ -123,6 +123,7 @@ begin
     // `and` does not short-cut, so use nested `if`s instead
 
     sig := signature(el);
+    if sig = 'TEPF' then begin exit; end;
 
     if ExportAll_selection.readBool('', 'IDs.csv', False) then begin ExportTabularIDs._process(el); end;
 
