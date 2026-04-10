@@ -43,7 +43,7 @@ var enit: IInterface;
 begin
     enit := elementBySignature(alch, 'ENIT');
 
-    outputString :=
+    ExportTabularALCH_outputLines.add(
         escapeCsvString(getFileName(getFile(alch))) + ', ' +
         escapeCsvString(stringFormID(alch)) + ', ' +
         escapeCsvString(getEditValue(elementBySignature(alch, 'EDID'))) + ', ' +
@@ -57,9 +57,8 @@ begin
         escapeCsvString(getEditValue(elementByName(enit, 'Health'))) + ', ' +
         escapeCsvString(getEditValue(elementByName(enit, 'Spoiled'))) + ', ' +
         escapeCsvString(getJsonEffectsArray(elementByName(alch, 'Effects'))) + ', ' +
-        escapeCsvString(getJsonChildArray(elementByPath(alch, 'Keywords\KWDA')));
-
-    ExportTabularALCH_outputLines.add(outputString);
+        escapeCsvString(getJsonChildArray(elementByPath(alch, 'Keywords\KWDA')))
+    );
 end;
 
 function finalize(): Integer;

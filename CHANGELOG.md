@@ -1,7 +1,9 @@
 # Changelog
 ## [4.4.0] -- 2026-04-10
-* `TEPF` records are excluded from `IDs.csv` to prevent a crash with EcksEdit 4.1.6.17 as of PTS release 0.2.2035.0.
+* `TEPF` records are excluded from `IDs.csv` to prevent a crash with EcksEdit v4.1.6.17 as of FO76 PTS v0.2.2035.0.
   This is now the only type of record to be excluded from `IDs.csv`.
+* Resolve major bug in `LSCR` dump script preventing any `LSCR` exports from occurring.
+  This bug had been present since `LSCR` dumps were introduced in v4.1.0 (2025-01-13).
 * Disable Xalia when creating dumps with Proton on Linux.
 * Migrate to [uv package manager](https://docs.astral.sh/uv/), simplifying the [usage instructions](https://github.com/fwdekker/fo76-dumps/wiki/Generating-dumps).
 

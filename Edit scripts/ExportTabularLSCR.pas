@@ -11,34 +11,31 @@ function initialize(): Integer;
 begin
     ExportTabularLSCR_outputLines := TStringList.create();
     ExportTabularLSCR_outputLines.add(
-            '"File"'              // Name of the originating ESM
-        + ', "Form ID"'           // Form ID
-        + ', "Editor ID"'         // Editor ID
-        + ', "Description"'       // (English) flavor text
-        + ', "Background image"'  // Path to file displayed in background
-        + ', "Foreground model"'  // Link to 'STAT' record displayed in foreground
+        '"File", ' +              // Name of the originating ESM
+        '"Form ID", ' +           // Form ID
+        '"Editor ID", ' +         // Editor ID
+        '"Description", ' +       // (English) flavor text
+        '"Background image", ' +  // Path to file displayed in background
+        '"Foreground model"'      // Link to 'STAT' record displayed in foreground
     );
 end;
 
-function canProcess(el: IInterface): Boolean;
+function process(el: IInterface): Integer;
 begin
-    result := signature(el) = 'LSCR';
+    if signature(el) <> 'LSCR' then begin exit; end;
+
+    _process(el);
 end;
 
-function process(LSCR: IInterface): Integer;
+function _process(lscr: IInterface): Integer;
 begin
-    if not canProcess(LSCR) then begin
-        addWarning(name(LSCR) + ' is not an LSCR. Entry was ignored.');
-        exit;
-    end;
-
     ExportTabularLSCR_outputLines.add(
-          escapeCsvString(getFileName(getFile(LSCR))) + ', '
-        + escapeCsvString(stringFormID(LSCR)) + ', '
-        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'EDID'))) + ', '
-        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'DESC'))) + ', '
-        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'BNAM'))) + ', '
-        + escapeCsvString(getEditValue(elementBySignature(LSCR, 'NNAM')))
+        escapeCsvString(getFileName(getFile(lscr))) + ', ' +
+        escapeCsvString(stringFormID(lscr)) + ', ' +
+        escapeCsvString(getEditValue(elementBySignature(lscr, 'EDID'))) + ', ' +
+        escapeCsvString(getEditValue(elementBySignature(lscr, 'DESC'))) + ', ' +
+        escapeCsvString(getEditValue(elementBySignature(lscr, 'BNAM'))) + ', ' +
+        escapeCsvString(getEditValue(elementBySignature(lscr, 'NNAM')))
     );
 end;
 
