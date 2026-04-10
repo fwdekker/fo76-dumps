@@ -2,6 +2,8 @@
 ## [4.4.0] -- 2026-04-10
 * `TEPF` records are excluded from `IDs.csv` to prevent a crash with EcksEdit 4.1.6.17 as of PTS release 0.2.2035.0.
   This is now the only type of record to be excluded from `IDs.csv`.
+* Disable Xalia when creating dumps with Proton on Linux.
+* Migrate to [uv package manager](https://docs.astral.sh/uv/), simplifying the [usage instructions](https://github.com/fwdekker/fo76-dumps/wiki/Generating-dumps).
 
 
 ## [4.3.0] -- 2026-01-13

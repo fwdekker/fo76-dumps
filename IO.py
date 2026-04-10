@@ -16,13 +16,11 @@ def prompt_confirmation(message: str) -> bool:
     """
 
     while True:
-        result = input(message).lower()
-        if result == "y":
-            return True
-        elif result == "n":
-            return False
-        else:
-            continue
+        match input(message).lower():
+            case "y":
+                return True
+            case "n":
+                return False
 
 
 def run_executable(args: List[str], compatdata_path: str, cwd: Path = Path.cwd()) -> None:
@@ -45,6 +43,7 @@ def run_executable(args: List[str], compatdata_path: str, cwd: Path = Path.cwd()
             stdout=subprocess.DEVNULL,
             env=dict(
                 os.environ,
+                PROTON_USE_XALIA="0",
                 STEAM_COMPAT_CLIENT_INSTALL_PATH=cfg.steam_path,
                 STEAM_COMPAT_DATA_PATH=compatdata_path,
             ),
