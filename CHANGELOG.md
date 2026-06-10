@@ -1,4 +1,10 @@
 # Changelog
+## [4.5.0] -- 2026-06-10
+* `TEPF` (infestation event playlist) records are no longer excluded from `IDs.csv`.
+  These records had been excluded since v4.4.0 (2026-04-10) because EcksEdit was unable to handle them.
+  There are now zero types of records excluded from `IDs.csv`.
+
+
 ## [4.4.0] -- 2026-04-10
 * `TEPF` records are excluded from `IDs.csv` to prevent a crash with EcksEdit v4.1.6.17 as of FO76 PTS v0.2.2035.0.
   This is now the only type of record to be excluded from `IDs.csv`.
