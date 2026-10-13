@@ -1,6 +1,6 @@
 # Fallout 76 dumps
 [![Latest release](https://img.shields.io/github/release/FWDekker/fo76-dumps?style=for-the-badge)](https://github.com/FWDekker/fo76-dumps/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/FWDekker/fo76-dumps/total?style=for-the-badge)](https://github.com/FWDekker/fo76-dumps/releases/zOverview)
+[![Downloads](https://img.shields.io/github/downloads/FWDekker/fo76-dumps/total?style=for-the-badge)](https://github.com/fwdekker/fo76-dumps/wiki/List-of-releases)
 [![Discussions](https://img.shields.io/github/discussions/FWDekker/fo76-dumps?style=for-the-badge)](https://github.com/FWDekker/fo76-dumps/discussions)
 
 _Fallout 76_ data dumps to assist data miners and wiki editors.
@@ -16,10 +16,10 @@ Includes:
 ### Feel free to [request new dumps](https://github.com/FWDekker/fo76-dumps/discussions)!
 
 ## Dumps
-> * **[List of releases](https://github.com/FWDekker/fo76-dumps/releases/zOverview)**
+> * **[List of releases](https://github.com/fwdekker/fo76-dumps/wiki/List-of-releases)**
 > * **[Latest release](https://github.com/FWDekker/fo76-dumps/releases/latest)**
 
-The dumps are distributed as attachments to [this repository's releases](https://github.com/FWDekker/fo76-dumps/releases/zOverview).
+The dumps are distributed as attachments to [this repository's releases](https://github.com/fwdekker/fo76-dumps/wiki/List-of-releases).
 A new release is created for each update to the game.
 The wiki contains a [list of all dumps](https://github.com/FWDekker/fo76-dumps/wiki/List-of-dumps) with a thorough explanation.
 
